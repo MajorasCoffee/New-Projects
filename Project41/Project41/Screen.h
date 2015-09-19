@@ -17,8 +17,8 @@ namespace SDLScreen {
 		bool processEvents();
 		void Close();
 		void Update();
-		void Clear();
-		//Uint stands for unsigned int and Unint8 is for an unsigned int of 8 bits or 1 byte
+		void BoxBlur();
+
 		void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 		
 	private:
@@ -26,6 +26,7 @@ namespace SDLScreen {
 		SDL_Renderer* m_renderer;
 		SDL_Texture* m_texture;
 		Uint32* m_buffer_1;
+		Uint32* m_buffer_2;
 	};
 
 }
